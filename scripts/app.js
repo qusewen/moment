@@ -88,10 +88,28 @@ function getMonth(){
         monthTime = 'Апрель'
     }
     if(month == 4){
-        monthTime = 'май'
+        monthTime = 'May'
     }
     if(month == 5){
         monthTime = 'Июнь'
+    }
+    if(month == 6){
+        monthTime = 'Июль'
+    }
+    if(month == 7){
+        monthTime = 'Август'
+    }
+    if(month == 8){
+        monthTime = 'Сентябрь'
+    }
+    if(month == 9){
+        monthTime = 'Октябрь'
+    }
+    if(month == 10){
+        monthTime = 'Ноябрь'
+    }
+    if(month == 11){
+        monthTime = 'Декабрь'
     }
 }
 
@@ -137,7 +155,7 @@ function getTimeOfDate(){
 
 
 greetingsElement.innerHTML = timeDate;
-dayOfWeek.innerHTML = `${dayWeek},${monthTime} ${num}`;
+dayOfWeek.innerHTML = `${dayWeek}, ${monthTime} ${num}`;
 const inputOfUserName = document.createElement('input');
 inputOfUserName.className = 'user__name'
 inputOfUserName.id = 'user-name'

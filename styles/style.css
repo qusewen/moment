@@ -17,13 +17,23 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+.header{
+    padding: 20px 7px;
+}
 .header__body{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-
+.weather__subtitle{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.weather__subtitle:last-child{
+    margin-bottom: 0;
+}
 
 
 .main{
@@ -47,20 +57,40 @@ body {
     background-color: rgba(240, 248, 255, 0);
     color: white;
     font-size: 30px;
+    font-weight: bold;
     outline: none;
     border: none;
-
+    width: 219px;
+}
+.wather__country{
+    width: 187px;
+    border-bottom:2px white solid;
+}
+.wather__img{
+    width: 50px;
 }
 .user__name::placeholder{
-    color: rgb(66, 66, 66);
+    color: rgb(234, 255, 40);
+}
+.wather__country::placeholder{
+    font-size: 15px;
 }
 .data__day{
     color: white;
-    font-size: 27px;
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 .time{
     color: white;
-    font-size: 30px;
+    font-size: 80px;
+    font-weight: 600;
+
+}
+.time__body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 .slide__btn img{
     width: 40px;
@@ -71,4 +101,9 @@ body {
 .sound__btn:nth-child(1),
 .sound__btn:last-child{
     width: 50px;
+}
+.header__wather{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
