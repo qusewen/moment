@@ -12,7 +12,20 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
 }
+.header__body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
 .main{
     display: flex;
     justify-content: space-between;
