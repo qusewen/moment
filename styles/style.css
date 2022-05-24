@@ -5,13 +5,18 @@
 
 
 }
-.main {
+body {
     width: 100%;
     height: 100vh;
     background-image: url(../assets/img/bg.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .gretings_subtitle,
 .gretings_title{
@@ -43,4 +48,14 @@
 .time{
     color: white;
     font-size: 30px;
+}
+.slide__btn img{
+    width: 40px;
+}
+.sound__btn{
+    cursor: pointer;
+}
+.sound__btn:nth-child(1),
+.sound__btn:last-child{
+    width: 50px;
 }

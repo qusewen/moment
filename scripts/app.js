@@ -1,12 +1,14 @@
 
 
 // поиск нужного места из документа
+
 const nowTime = document.querySelector('#clock-of-data')
 const dayOfWeek = document.querySelector('#data-of-day')
-const greetingsElement = document.querySelector('#time-of-date')
 const gretingsUser = document.querySelector('#gretings-user')
-
-
+const greetingsElement = document.querySelector('#time-of-date')
+const body = document.querySelector('body')
+const nextSlide = document.querySelector('.slider_next')
+const prevSlide = document.querySelector('.slider_prev')
 //здесь вытягиваю нужные мне значения из даты
 let date = new Date()
 const hours = date.getHours();
@@ -18,22 +20,55 @@ const num = date.getDate()
 // console.log(time)
 
 
-
 //нужные перменные 
-let timeDate = '';
+let timeDate ='';
 let dayWeek = '';
 let monthTime = '';
 let timeOfdate = '';
-
+let bgnum;
+let url = ''
 //вызов функции
-getTimeOfDate()
+
 getDay()
 getMonth()
+getTimeOfDate()
 showTime()
+getRandomNum()
+// функция которая возвращает нам случайное число
 
+nextSlide.onclick = nextPhoto
+prevSlide.onclick = prevPhoto
+function nextPhoto(){
+    getRandomNum()
+ 
+}
+function prevPhoto(){
+    getRandomNum()
+}
+
+
+
+
+function getRandomNum(){
+    
+    bgnum = (Math.random() * (20 - 10) + 10).toFixed(0);
+    url = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeDate}/${bgnum}.jpg`
+    console.log(url)
+    body.style.backgroundImage = `url(${url})`
+    console.log(body.style.backgroundImage) 
+}
+
+
+
+
+
+
+
+console.log(bgnum)
 function showTime(){
     date = new Date()
     nowTime.innerHTML = date.toLocaleTimeString()  
+    
     setTimeout(showTime, 1000);
 }
 
@@ -59,6 +94,7 @@ function getMonth(){
         monthTime = 'Июнь'
     }
 }
+
 //опеределение дня недели
 function getDay(){
     if(day == 1){
@@ -83,25 +119,30 @@ function getDay(){
     }
     
 }
+
 //функция времени суток 
 function getTimeOfDate(){
-    if(hours >= 6 && hours < 12 ){
+    if((hours >= 6) && (hours < 12) ){
         timeDate = 'morning'
     }else if(hours >= 12 && hours < 18){
-        timeDate = 'day'
-    }else if(hours >= 18 && hours < 00){
+        timeDate = 'afternoon'
+    }else if(hours >= 18 && hours < 24){
         timeDate = 'evening'
     }else if(hours >= 00 && hours < 6){
-        timeDate = 'nigth'
+        timeDate = 'night'
     }
+    console.log(timeDate)
 }
 
-greetingsElement.innerHTML = timeDate;
 
+
+greetingsElement.innerHTML = timeDate;
 dayOfWeek.innerHTML = `${dayWeek},${monthTime} ${num}`;
 const inputOfUserName = document.createElement('input');
 inputOfUserName.className = 'user__name'
+inputOfUserName.id = 'user-name'
 inputOfUserName.placeholder = '[ENTER NAME]'
+inputOfUserName.name = 'name'
 gretingsUser.append(inputOfUserName)
 
 
