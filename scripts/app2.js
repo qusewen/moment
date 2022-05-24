@@ -1,33 +1,18 @@
 
 const log = console.log
 const deg = document.querySelector('#deg')
-log(deg)
 const wind = document.querySelector('#wind')
-log(wind)
 const humidity = document.querySelector('#humidity')
-log(humidity)
 const icons = document.querySelector('#wather-img')
 const countryValue = document.querySelector('#country')
 let country = '';
-getCountry()
-
 let iconId = '';
 let urlIcon ='';
 
-
-let wetherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${country}&lang=ru&appid=ce616969cd740fccc2086080fbc71d41&units=metric`
-
-
-
-function getCountry(){
-    country = countryValue.value
-    log(country)
-    setTimeout(getCountry, 1000)
-}
-
-
-
-fetch(wetherUrl)
+getweather()
+function getweather(){
+    let wetherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${countryValue.value}&lang=ru&appid=ce616969cd740fccc2086080fbc71d41&units=metric`
+    fetch(wetherUrl)
     .then((response) => response.json())
     .then((responseData) =>showWeather(responseData) )
 
@@ -39,7 +24,11 @@ function showWeather(responseData){
     iconId = responseData.weather[0].icon
     urlIcon = `http://openweathermap.org/img/wn/${iconId}@2x.png`
     icons.src = urlIcon;
-    log(iconId)
-    log(responseData)
-    log(responseData.main.temp)
 }
+
+}
+
+
+
+
+countryValue.addEventListener('change', getweather);
