@@ -27,8 +27,4 @@ function showWeather(responseData){
 }
 
 }
-
-
-
-
 countryValue.addEventListener('change', getweather);

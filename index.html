@@ -14,9 +14,11 @@
 <header class="header">
     <div class="header__body">
         <div class="header__sound">
-            <img class="sound__btn" src="assets/svg/play-prev.svg" alt="prev">
-            <img class="sound__btn" src="assets/svg/play.svg" alt="prev">
-            <img class="sound__btn" src="assets/svg/play-next.svg" alt="prev">
+            <img class="sound__btn" id="prev-sound" src="assets/svg/play-prev.svg" alt="prev">
+            <img class="sound__btn" id="playBtn" src="assets/svg/play.svg" alt="play">
+            <img class="sound__btn" id="next-sound" src="assets/svg/play-next.svg" alt="next">
+            <audio class="music" src="assets/sounds/AquaCaelestis.mp3"></audio>
+            <ul class="playlist_container"></ul>
         </div>
         <div class="header__wather">
             <input type="text" id="country" class="user__name wather__country" value="Mogilev" placeholder="ENTER YOUR COUNTRY">
@@ -54,5 +56,7 @@
 
     <script src="scripts/app.js"></script>
     <script src="scripts/app2.js"></script>
+
+    <script type="module" src="scripts/app3.js"></script>
 </body>
 </html>
