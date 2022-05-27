@@ -40,26 +40,44 @@ for(let key in playList){
     li.innerHTML = `${playList[key].title}`
     playListContainer.append(li)
 }
+let newEll = document.querySelectorAll('.play-item')
 prevsound.addEventListener('click', prev)
 nexsound.addEventListener('click', next)
 function prev(){
-    
+    playAudioBtn.src = 'assets/svg/pause.svg'
     if(count === 0){
         count = playList.length 
     }
     count --
     audio.src = playList[count].src
+    newEll.forEach((i) => {
+        if(i.innerHTML === playList[count].title){
+            console.log(i.value)
+            i.classList.add('active-item')
+        }else{
+            i.classList.remove('active-item') 
+        }
+    })
     audio.play()
 
-
 }
+console.log(count)
 function next(){
+    playAudioBtn.src = 'assets/svg/pause.svg'
     count ++
     if(count === playList.length ){
         count = 0 
     }
 
     audio.src = playList[count].src
+    newEll.forEach((i) => {
+        if(i.innerHTML === playList[count].title){
+            console.log(i.value)
+            i.classList.add('active-item')
+        }else{
+            i.classList.remove('active-item') 
+        }
+    })
     audio.play()
 }
 
@@ -67,10 +85,12 @@ function next(){
 
 
 
-
-
 function plays(){
-
+    newEll.forEach((i) =>{
+        if(i.innerHTML === playList[count].title){
+            console.log(i.value)
+            i.classList.add('active-item')}
+    })
 
     if(!isPlay){
         isPlay = true;

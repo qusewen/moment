@@ -108,6 +108,9 @@ body {
     flex-direction: column;
     align-items: flex-start;
 }
+.play-item{
+    color: white;
+}
 .active-item{
     color: red;
 }
