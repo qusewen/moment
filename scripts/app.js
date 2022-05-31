@@ -50,7 +50,6 @@ function prevPhoto(){
 
 
 function getRandomNum(){
-    
     bgnum = (Math.random() * (20 - 10) + 10).toFixed(0);
     url = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeDate}/${bgnum}.jpg`
     console.log(url)

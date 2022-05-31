@@ -99,10 +99,11 @@ body {
 .sound__btn{
     cursor: pointer;
 }
-.sound__btn:nth-child(1),
-.sound__btn:last-child{
+
+.p_sound{
     width: 50px;
 }
+
 .header__wather{
     display: flex;
     flex-direction: column;
@@ -112,5 +113,33 @@ body {
     color: white;
 }
 .active-item{
-    color: red;
+    color: rgb(0, 255, 34);
+}
+.btnquote{
+    margin-bottom: 20px;
+    width: 50px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+.btnquote:hover{
+    transform: scale(1.2);
+}
+.quote_body{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 120px;
+}
+.playlist_container{
+    margin-left: 19px;
+}
+.playlist_container li:hover{
+    color: antiquewhite;
+    transform: scale(1.05);
+    cursor: pointer;
 }
