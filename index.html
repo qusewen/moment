@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>momentum</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+
+</head>
+<body>
+
+<header class="header">
+    <div class="header__body">
+        <div class="header__sound">
+            <img class="sound__btn p_sound" id="prev-sound" src="assets/svg/play-prev.svg" alt="prev">
+            <img class="sound__btn" id="playBtn" src="assets/svg/play.svg" alt="play">
+            <img class="sound__btn p_sound" id="next-sound" src="assets/svg/play-next.svg" alt="next">
+            <audio class="music" src="assets/sounds/AquaCaelestis.mp3"></audio>
+            <ul class="playlist_container"></ul>
+        </div>
+        <div class="header__wather">
+            <input type="text" id="country" class="user__name wather__country" value="Mogilev" placeholder="ENTER YOUR COUNTRY">
+            <img class="wather__img" id="wather-img" src="" alt="wather_img">
+            <p class="weather__subtitle" id="deg"></p>
+            <p class="weather__subtitle" id="wind"></p>
+            <p class="weather__subtitle" id="humidity"></p>
+        </div>
+
+
+    </div>
+
+
+
+</header>
+
+
+    <main class="main">
+    <a href="##" class="slide__btn slider_prev"><img src="assets/svg/slider-prev.svg" alt="slider-prev"></a>
+    <div class="time__body">
+        <div class="time" id="clock-of-data"></div>
+        <div class="data__day" id="data-of-day"></div>
+        <div class="greetings" id="gretings-user"><span class="gretings_title">Good</span><p class="gretings_subtitle" id="time-of-date"></p></div>
+    </div>
+    <a href="##" class="slide__btn slider_next"><img src="assets/svg/slider-next.svg" alt="slider-next"></a>
+
+
+
+    </main>
+
+<footer class="footer">
+    <svg class="btnquote" xmlns="http://www.w3.org/2000/svg" version="1.1" width="64" height="64" viewBox="0 0 64 64">
+        <title>loop2</title>
+        <path fill="#fff" d="M55.605 10.395c-5.851-6.388-14.26-10.395-23.605-10.395-17.673 0-32 14.327-32 32h6c0-14.359 11.641-26 26-26 7.689 0 14.596 3.339 19.356 8.644l-9.356 9.356h22v-22l-8.395 8.395z"/>
+        <path fill="#fff" d="M58 32c0 14.359-11.641 26-26 26-7.689 0-14.596-3.339-19.356-8.644l9.356-9.356h-22v22l8.395-8.395c5.851 6.389 14.26 10.395 23.605 10.395 17.673 0 32-14.327 32-32h-6z"/>
+        </svg>
+    <div class="quote_body"></div>
+</footer>
+
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/app2.js"></script>
+    <script src="scripts/qutes.js"></script>
+
+    <script type="module" src="scripts/app3.js"></script>
+</body>
+</html>
