@@ -9,6 +9,7 @@ const greetingsElement = document.querySelector('#time-of-date')
 const body = document.querySelector('body')
 const nextSlide = document.querySelector('.slider_next')
 const prevSlide = document.querySelector('.slider_prev')
+
 //здесь вытягиваю нужные мне значения из даты
 let date = new Date()
 const hours = date.getHours();
@@ -56,7 +57,6 @@ function getRandomNum(){
     body.style.backgroundImage = `url(${url})`
     console.log(body.style.backgroundImage) 
 }
-
 
 
 
@@ -163,3 +163,14 @@ inputOfUserName.name = 'name'
 gretingsUser.append(inputOfUserName)
 
 
+const userLocal = document.querySelector('#user-name')
+
+userLocal.addEventListener('change', getlocalStorage)
+
+function getlocalStorage(){
+    let newUserName = userLocal.value
+    localStorage.setItem('name', newUserName);
+
+}
+
+ userLocal.value = localStorage.name

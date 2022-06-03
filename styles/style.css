@@ -136,10 +136,12 @@ body {
     padding: 0 0 120px;
 }
 .playlist_container{
-    margin-left: 19px;
+    margin: 20px 0 0 19px;
+
 }
 .playlist_container li:hover{
     color: antiquewhite;
     transform: scale(1.05);
     cursor: pointer;
 }
+
