@@ -172,5 +172,9 @@ function getlocalStorage(){
     localStorage.setItem('name', newUserName);
 
 }
+if(localStorage.name){
+    userLocal.value = localStorage.name
+}else{
+    userLocal.value = ''
+}
 
- userLocal.value = localStorage.name
